@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <h2>Current Games</h2>
+            <ul>
+                {{#each games}}
+                    <li><a href="/game/{{this}}">Game {{@index}}</a></li>
+                {{else}}
+                    <li>No active games</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div id="main-container">
+            <div id="start-game">
+                <h1>Start Game</h1>
+                <input type="number" id="lower-bound" placeholder="Lower bound" required>
+                <input type="number" id="upper-bound" placeholder="Upper bound" required>
+                <button onclick="startGame()">Start Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/start.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script>
+        let gameId = "{{this}}";
+    </script>
+</head>
+<body>
+    <div id="name-input">
+        <h1>Enter Your Name</h1>
+        <input type="text" id="player-name" placeholder="Enter your name" required>
+        <button onclick="submitName()">Submit Name</button>
+    </div>
+    <div id="guessing-game" style="display: none;">
+        <h1>Guess the Number</h1>
+        <input type="number" id="guess" placeholder="Enter your guess">
+        <button onclick="makeGuess()">Submit Guess</button>
+        <p id="result"></p>
+        <button id="restart-button" style="display: none;" onclick="home()">Restart Game</button>
+    </div>
+    <div id="scores" style="display: none;">
+        <h1>Top Scores</h1>
+        <ul id="scores-list"></ul>
+    </div>
+    <script src="/static/game.js"></script>
+</body>
+</html>
+
+
